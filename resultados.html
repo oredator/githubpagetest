@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <h1>Capítulo 9</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="marcoTeorico.html">Marco Teórico</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Resultados</h1>
+        <p>Aquí se mostrarán los resultados de las optimizaciones realizadas a través de los simuladores.</p>
+    </div>
+
+    <div class="container">
+        <h1>Optimización de Publicidad</h1>
+
+        <label for="c1">Coef. Exposición TV (c1): </label>
+        <input type="number" id="c1" value="12">
+
+        <label for="c2">Coef. Exposición Radio (c2): </label>
+        <input type="number" id="c2" value="9">
+
+        <label for="c3">Coef. Exposición Periódico (c3): </label>
+        <input type="number" id="c3" value="7">
+
+        <label for="cost1">Costo TV (por anuncio): </label>
+        <input type="number" id="cost1" value="6000">
+
+        <label for="cost2">Costo Radio (por anuncio): </label>
+        <input type="number" id="cost2" value="4500">
+
+        <label for="cost3">Costo Periódico (por anuncio): </label>
+        <input type="number" id="cost3" value="3000">
+
+        <label for="budget">Presupuesto Total: </label>
+        <input type="number" id="budget" value="35000">
+
+        <button onclick="resolverProblema()">Resolver</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <div class="container">
+        <h1> EJERCICIOS PROPUESTOS YA RESUELTOS </h1>
+        <h2>1. Selección de medios de comunicación  </h2>
+        <p>Relax-and-Enjoy Lake Development Corporation desea optimizar su estrategia publicitaria asignando un presupuesto de $30000 entre diferentes medios de comunicación (televisión, periódicos, suplementos dominicales y radio) para maximizar la cantidad de exposición de sus anuncios.</p>
+        <p>El problema se enmarca en una serie de restricciones, incluyendo:</p>
+        <ul>
+            <li>Un límite en la cantidad de anuncios que pueden ser utilizados por medio.</li>
+            <li>Un máximo de $18000 para los anuncios de televisión.</li>
+            <li>Una necesidad de alcanzar al menos a 50000 clientes potenciales.</li>
+        </ul>
+        <h3>Datos clave:</h3>
+        <ul>
+            <li><strong>Variables de decisión:</strong></li>
+            <ul>
+                <li>X1 = Inversión en anuncios de televisión (Bs)</li>
+                <li>X2 = Inversión en anuncios de periódicos (Bs)</li>
+                <li>X3 = Inversión en anuncios de suplementos dominicales (Bs)</li>
+                <li>X4 = Inversión en anuncios de radio (Bs)</li>
+            </ul>
+        </ul>
+
+        <h3>Función Objetivo:</h3>
+        <p>Max Z = 3x1 + 2x2 + 4x3 + x4</p>
+
+        <h3>Restricciones:</h3>
+        <ul>
+            <li>Presupuesto total: x1 + x2 + x3 + x4 + s1 = 30000</li>
+            <li>Límite de televisión: x1 + s2 = 18000</li>
+            <li>Alcance mínimo de clientes: 2x1 + 1.5x2 + 3x3 + x4 – s3 = 50000</li>
+        </ul>
+
+        <p><strong>Condiciones:</strong> x1, x2, x3, x4, s1, s2, s3 ≥ 0</p>
+
+        <div class="tables-container">
+            <h3>Tabla 1</h3>
+            <img src="img/tabla1.png" class="img-table">
+            <h3>Tabla 2</h3>
+            <img src="img/tabla2.png" class="img-table">
+            <h3>Tabla 3</h3>
+            <img src="img/tabla3.png" class="img-table">
+            <h3>Tabla 4</h3>
+            <img src="img/tabla4.png" class="img-table">
+            <h3>Tabla 5</h3>
+            <img src="img/tabla5.png" class="img-table">
+        </div>
+<div class="container">
+    <h3>Solución Final:</h3>
+    <div class="solution-container">
+        <p><strong>X1 (Televisión) = 10000</strong></p>
+        <p><strong>X2 (Periódicos) = 0</strong></p>
+        <p><strong>X3 (Suplementos) = 10000</strong></p>
+        <p><strong>X4 (Radio) = 10000</strong></p>
+        <p><strong>Valor máximo de Z = 66,666.67</strong></p>
+    </div>
+    
+    <h3>Verificación de Restricciones:</h3>
+    <div class="verification-container">
+        <ul>
+            <li><strong>Presupuesto total:</strong> 10000 + 0 + 10000 + 10000 = 30000 ✓</li>
+            <li><strong>Límite de televisión:</strong> 10000 ≤ 18000 ✓</li>
+            <li><strong>Alcance de clientes:</strong> 2(10000) + 1.5(0) + 3(10000) + 1(10000) = 50000 ✓</li>
+        </ul>
+    </div>
+</div>
+
+    </div>
+
+
+
+    <div class="container">
+        <h2>2. Investigación de mercados </h2>
+        <p>Una organización realiza estudios de mercado para enterarse de algunas características, actitudes y preferencias de los consumidores. Las firmas de investigación de mercados que se especializan en proporcionar esta información con frecuencia hacen la investigación real para las organizaciones de los clientes. Los servicios típicos que ofrecen este tipo de empresas incluyen el diseño de estudios, la realización de encuestas de mercado, el análisis de los datos recabados y la entrega de informes donde se resumen los hallazgos y se incluyen recomendaciones para el cliente. En la fase de diseño de la investigación pueden establecerse metas o cuotas para el número y tipo de las personas que responderán la encuesta. El objetivo de la firma de investigación de mercados es realizar la encuesta de tal manera que satisfaga las necesidades del cliente a un costo mínimo. </p>
+
+        <h3>Datos clave:</h3>
+        <ul>
+            <li><strong>Variables de decisión:</strong></li>
+            <ul>
+                <li>DC: Numero de entrevistas matutinas a familias con hijos. </li>
+                <li>EC: Numero de entrevistas vespertinas a familias con hijos.</li>
+                <li>DNC: Numero de entrevistas matutinas a familias sin hijos.</li>
+                <li>Función objetivo: Minimizar el costo total: </li>
+            </ul>
+        </ul>
+
+        <h3>Función Objetivo:</h3>
+        <p>Min COSTO TOTAL = 20DC + 25EC + 18DNC + 20ENC </p>
+
+        <h3>Restricciones:</h3>
+        <ul>
+            <li>Total de entrevistas:   DC + EC + DNC + ENC = 1000 </li>
+            <li>Familias con hijos:     DC + EC >= 400</li>
+            <li>Familias sin hijos:     DNC + ENC >= 400 </li>
+            <li>40% de entrevistas a familias con hijos durante la tarde:   EC >= 0.4(DC +EC) </li>
+            <li>60% de entrevistas a familias sin hijos durante la tarde:   ENC >= 0.6(DNC + ENC) </li>
+        </ul>
+
+    
+
+        <div class="tables-container">
+            <h3>Tabla 1</h3>
+            <img src="img/tabla11.JPG" class="img-table">
+            <h3>Tabla 2</h3>
+            <img src="img/tabla22.JPG" class="img-table">
+            <h3>Tabla 3</h3>
+            <img src="img/tabla33.JPG" class="img-table">
+            <h3>Tabla 4</h3>
+            <img src="img/tabla44.JPG" class="img-table">
+            <h3>Tabla 5</h3>
+            <img src="img/tabla55.JPG" class="img-table">
+        </div>
+
+
+        <div class="tables-container">
+            <h2>Análisis de sensibilidad</h2>
+            <h3>Tabla 1</h3>
+            <img src="img/tabla111.JPG" class="img-table">
+            <h3>Tabla 2</h3>
+            <img src="img/tabla222.JPG" class="img-table">
+            <h3>Tabla 3</h3>
+            <img src="img/tabla333.JPG" class="img-table">
+        </div>
+
+
+<div class="container">
+    <h3>Solución Óptima:</h3>
+    <div class="solution-container">
+        <p>Según el análisis, la solución mínima de costo se obtiene con: </p>
+        <p><strong>DC = </strong>240</p>
+        <p><strong>EC = </strong>160</p>
+        <p><strong>DND = </strong>200</p>
+        <p><strong>ENC = </strong>360</p>
+    </div>
+    
+    <h3>Costo total mínimo:</h3>
+    <div class="verification-container">
+        <ul>
+            <li><strong>20320$ ✓</li>
+        
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
